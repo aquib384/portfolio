@@ -3,277 +3,246 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aquib Khan | Senior Android Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+<title>Aquib Khan | Portfolio</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+/* Animated Diagonal Gradient Background */
 body {
-  font-family: "Poppins", sans-serif;
-  background: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f5f5f5;
+    background: linear-gradient(45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    background-size: 800% 800%;
+    animation: gradientBG 20s ease infinite;
 }
 
-/* Floating gradient background */
-body::before {
-  content: '';
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(270deg, #6a11cb, #2575fc, #ff6f61, #ffdd59);
-  background-size: 800% 800%;
-  animation: gradientMove 20s ease infinite;
-  z-index: -1;
-  filter: blur(100px);
-}
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {background-position:0% 0%;}
+    25% {background-position:100% 0%;}
+    50% {background-position:100% 100%;}
+    75% {background-position:0% 100%;}
+    100% {background-position:0% 0%;}
 }
 
-header {
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
-nav a:hover { color: #ffdd59; }
+nav a:hover { color: #00e6ff; }
 
-section {
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: auto;
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
 }
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-  color: #2575fc;
+header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+    animation: bounce 2s infinite;
 }
-h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #6a11cb;
-  margin: 0.5rem auto;
-  border-radius: 2px;
+@keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+    background: linear-gradient(90deg, #ffecd2, #fcb69f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease forwards;
+}
+header p {
+    font-size: 1.1rem;
+    color: #ddd;
+    animation: fadeInDown 1.2s ease forwards;
+}
+@keyframes fadeInDown {
+    0% {opacity:0; transform: translateY(-20px);}
+    100% {opacity:1; transform: translateY(0);}
+}
+
+/* Section */
+section { max-width: 1100px; margin: auto; padding: 40px 20px; }
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(270deg, #f7971e, #ffd200, #f7971e, #ff4e50);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 8s ease infinite, fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+@keyframes gradientAnimation {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+@keyframes fadeInUp {
+    0% {opacity:0; transform: translateY(20px);}
+    100% {opacity:1; transform: translateY(0);}
+}
+
+h3 { color: gold; margin: 0.5rem 0; }
+ul { padding-left: 20px; margin: 0.5rem 0 1.5rem; }
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 .card {
-  background: linear-gradient(145deg, #ffffff, #e0f7fa);
-  padding: 1.5rem;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 }
-.card.visible { opacity: 1; transform: translateY(0); }
+.card:nth-child(1){animation-delay:0.3s;}
+.card:nth-child(2){animation-delay:0.6s;}
+.card:nth-child(3){animation-delay:0.9s;}
+.card:hover { transform: translateY(-8px) scale(1.03); box-shadow:0px 6px 20px rgba(0,0,0,0.5); }
+.card img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: contain; 
+    background: #111; 
+    transition: transform 0.5s ease; 
+}
+.card img:hover { transform: scale(1.05); }
+.card-content { padding: 20px; }
+.card-content h3 { margin: 0 0 10px; font-size:1.3rem; color: gold; }
+.card-content p { font-size:0.95rem; color: #ccc; line-height:1.4; }
+@keyframes fadeIn { 0% {opacity:0; transform: translateY(20px);} 100% {opacity:1; transform: translateY(0);} }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.project-card {
-  background: linear-gradient(145deg, #ffe0b2, #fff3e0);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform 0.3s;
-  opacity: 0;
-  transform: translateY(40px);
-}
-.project-card.visible { opacity: 1; transform: translateY(0); }
-.project-card:hover { transform: translateY(-6px) scale(1.02); }
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.project-card div { padding: 1rem; }
-.project-card h3 { color: #ff6f61; margin-bottom: 0.5rem; }
-.project-card a { color: #2575fc; text-decoration: none; font-weight: 500; }
-.project-card a:hover { color: #ff6f61; }
-
-.social-links a { color: #6a11cb; font-size: 1.3rem; margin: 0 10px; transition: 0.3s; }
-.social-links a:hover { color: #2575fc; }
-
-footer {
-  background: rgba(0,0,0,0.6);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-}
-
-/* Typing animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  0%, 50%, 100% { border-color: transparent; }
-  25%, 75% { border-color: #ffdd59; }
-}
-.typing {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #ffdd59;
-  width: 0;
-  animation: typing 3s steps(20) forwards, blink 0.75s step-end infinite;
-}
+/* Footer */
+footer { text-align:center; padding:20px; background: linear-gradient(90deg, #1f1c2c, #928dab); color:#ccc; font-size:0.9rem; }
+a { color: #00e6ff; text-decoration:none; }
+a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 
-<header>
-  <h1><span class="typing">Aquib Khan</span></h1>
-  <nav>
-    <a href="#about">About</a>
+<nav>
+    <a href="#objective">Objective</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-  </nav>
+</nav>
+
+<header>
+    <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/pic.jpeg" alt="Aquib Khan">
+    <h1>Aquib Khan</h1>
+    <p>Senior Android Developer | 6+ Years Experience</p>
 </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card" style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
-    <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/pic.jpeg" alt="Aquib Khan" style="width:150px; height:150px; border-radius:50%; object-fit:cover; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-    <p style="flex:1; min-width:200px;">
-      Experienced and impact-driven Senior Android Developer with 5+ years of building robust, scalable, and user-focused Android applications. Proficient in Kotlin, Java, and Jetpack Compose, with deep expertise in MVVM architecture, modular app design, and REST API integration. Strong advocate of clean code, unit testing, and performance optimization, ensuring apps are reliable and maintainable at scale.
-    </p>
-  </div>
+<section id="objective">
+    <h2 class="section-title">Objective</h2>
+    <p>Experienced and impact-driven Senior Android Developer with 5+ years of building robust, scalable, and user-focused Android applications. Proficient in Kotlin, Java, and Jetpack Compose, with deep expertise in MVVM architecture, modular app design, and REST API integration. Strong advocate of clean code, unit testing, and performance optimization, ensuring apps are reliable and maintainable at scale. Proven ability to collaborate cross-functionally, mentor junior engineers, and drive end-to-end delivery with CI/CD pipelines and agile practices. Passionate about creating seamless mobile experiences that solve real-world problems and scale across millions of users.</p>
 </section>
 
-
 <section id="experience">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Capgemini | Senior Android Developer</h3>
-    <p>Bengaluru, Oct 2024 – Present</p>
+    <h2 class="section-title">Experience</h2>
+    <h3>Capgemini | Senior Android Developer (Oct 2024 – Present)</h3>
     <ul>
-      <li>Contributed to architectural decisions and design discussions.</li>
-      <li>Developed modular and scalable code in Kotlin.</li>
-      <li>Mentored new developers on project architecture and codebase.</li>
+        <li>Contributed to architectural decisions and design discussions.</li>
+        <li>Developed modular and scalable code in Kotlin.</li>
+        <li>Partnered with QA to ensure high-quality feature delivery.</li>
+        <li>Mentored new developers on project architecture and codebase.</li>
     </ul>
-  </div>
-  <div class="card">
-    <h3>Tata Consultancy Services | Senior Android Developer</h3>
-    <p>Noida, Dec 2021 – Oct 2024</p>
+    <h3>Tata Consultancy Services | Senior Android Developer (Dec 2021 – Oct 2024)</h3>
     <ul>
-      <li>Built Android apps using Jetpack components, Kotlin, and coroutines.</li>
-      <li>Integrated REST APIs and implemented Room database.</li>
-      <li>Delivered features for apps used by millions of users.</li>
+        <li>Built Android apps using Jetpack components, Kotlin, and coroutines.</li>
+        <li>Integrated REST APIs and implemented local storage with Room.</li>
+        <li>Used Retrofit and Glide for network and image operations.</li>
+        <li>Delivered features for large-scale apps used by millions of users.</li>
     </ul>
-  </div>
-  <div class="card">
-    <h3>Pulp Strategy | Junior Android Developer</h3>
-    <p>New Delhi, Apr 2021 – Jul 2021</p>
+    <h3>Pulp Strategy | Junior Android Developer (Apr 2021 – Jul 2021)</h3>
     <ul>
-      <li>Collaborated on two Android applications.</li>
-      <li>Assisted in troubleshooting and resolving technical issues.</li>
+        <li>Collaborated with senior developers to contribute to two Android Applications.</li>
+        <li>Rendered assistance in troubleshooting and resolving technical issues.</li>
+        <li>Participated in code reviews and analyzed feedback to improve coding skills.</li>
     </ul>
-  </div>
-  <div class="card">
-    <h3>Magna Infotech | Junior Android Developer</h3>
-    <p>Noida, Aug 2017 – Nov 2018</p>
+    <h3>Magna Infotech | Junior Android Developer (Aug 2017 – Nov 2018)</h3>
     <ul>
-      <li>Developed logistics apps with real-time tracking.</li>
-      <li>Integrated third-party APIs to enhance workflow.</li>
+        <li>Developed logistics apps with real-time tracking and route planning.</li>
+        <li>Implemented third-party API integrations to enhance workflow.</li>
+        <li>Conducted unit testing and mentored junior developers.</li>
     </ul>
-  </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education</h2>
+    <p>Bachelor of Technology – 2015, Abdul Kalam Technical University, Lucknow</p>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="card">
-    <p>Kotlin, Java, XML, SQL, JSON, Android SDK, Jetpack Components, Dagger/Hilt, Retrofit, Room, Firebase, RxJava, Coroutines, Jetpack Compose, MVVM, MVP, MVC, RESTful APIs, GraphQL, Firebase Realtime Database, SQLite, Android Studio, Git, Agile, Jenkins, JIRA, Unit Testing, UI Automation, OAuth 2.0, SSL/TLS, ProGuard, Data Encryption, Secure Storage.</p>
-  </div>
+    <h2 class="section-title">Skills</h2>
+    <p>Kotlin | Java | XML | SQL | JSON | Android SDK | Jetpack Components | Dagger/Hilt | Retrofit | Room | Firebase | RxJava | Coroutines | Jetpack Compose | MVVM | MVP | MVC | RESTful APIs | GraphQL | Firebase Realtime Database | SQLite | Android Studio | Git | Agile | Jenkins | JIRA | Unit Testing | UI Automation | OAuth 2.0 | SSL/TLS | ProGuard | Data Encryption | Secure Storage</p>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x180" alt="Horizon Health">
-      <div>
-        <h3>Horizon Health</h3>
-        <p>Health plan access, care finder, and member services for Horizon BCBS.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.horizonblue.memberportal" target="_blank">View App</a>
-      </div>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/horizon.jpeg" alt="Horizon Health">
+            <div class="card-content">
+                <h3>Horizon Health</h3>
+                <p><a href="https://play.google.com/store/apps/details?id=com.horizonblue.memberportal&hl=en_IN" target="_blank">Play Store Link</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/paypal.jpeg" alt="PayPal Business">
+            <div class="card-content">
+                <h3>PayPal Business</h3>
+                <p><a href="https://play.google.com/store/apps/details?id=com.paypal.merchant.client&hl=en_IN" target="_blank">Play Store Link</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/ttb.jpeg" alt="Turn the Bus">
+            <div class="card-content">
+                <h3>Turn the Bus</h3>
+                <p><a href="https://play.google.com/store/apps/details?id=mobile.turnthebus.org&hl=en&pli=1" target="_blank">Play Store Link</a></p>
+            </div>
+        </div>
     </div>
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x180" alt="PayPal Business">
-      <div>
-        <h3>PayPal Business</h3>
-        <p>Invoice maker and business money management on the go.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.paypal.merchant.client" target="_blank">View App</a>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x180" alt="Turn the Bus">
-      <div>
-        <h3>Turn the Bus</h3>
-        <p>Educational app covering BSEB class 10 & 12 syllabus.</p>
-        <a href="https://play.google.com/store/apps/details?id=mobile.turnthebus.org" target="_blank">View App</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <div class="card" style="text-align:center;">
+    <h2 class="section-title">Contact</h2>
     <p>Email: <a href="mailto:Khanaquib384@gmail.com">Khanaquib384@gmail.com</a></p>
     <p>Phone: +91 9956029729</p>
-    <p>Noida, Uttar Pradesh</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/aquib-khan-6b0a2a12b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://bitbucket.org/aquib384" target="_blank"><i class="fab fa-bitbucket"></i></a>
-    </div>
-  </div>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/aquib-khan-6b0a2a12b/" target="_blank">Profile</a></p>
+    <p>Git: <a href="https://bitbucket.org/aquib384" target="_blank">bitbucket.org/aquib384</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Aquib Khan | All Rights Reserved</p>
+    &copy; 2025 Aquib Khan. All Rights Reserved.
 </footer>
-
-<script>
-// Scroll animation
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.card, .project-card').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
