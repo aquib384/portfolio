@@ -1,248 +1,369 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aquib Khan | Portfolio</title>
-<style>
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-/* Animated Diagonal Gradient Background */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    color: #f5f5f5;
-    background: linear-gradient(45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
-    background-size: 800% 800%;
-    animation: gradientBG 20s ease infinite;
-}
+    <meta charset="UTF-8">
 
-/* Gradient Animation */
-@keyframes gradientBG {
-    0% {background-position:0% 0%;}
-    25% {background-position:100% 0%;}
-    50% {background-position:100% 100%;}
-    75% {background-position:0% 100%;}
-    100% {background-position:0% 0%;}
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Navbar */
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px 0;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-}
-nav a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-nav a:hover { color: #00e6ff; }
+    <title>Privacy Policy - Apna Market</title>
 
-/* Header */
-header {
-    text-align: center;
-    padding: 50px 20px;
-}
-header img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
-    animation: bounce 2s infinite;
-}
-@keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
+    <style>
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 20px 0 10px;
-    background: linear-gradient(90deg, #ffecd2, #fcb69f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeInDown 1s ease forwards;
-}
-header p {
-    font-size: 1.1rem;
-    color: #ddd;
-    animation: fadeInDown 1.2s ease forwards;
-}
-@keyframes fadeInDown {
-    0% {opacity:0; transform: translateY(-20px);}
-    100% {opacity:1; transform: translateY(0);}
-}
+        body {
 
-/* Section */
-section { max-width: 1100px; margin: auto; padding: 40px 20px; }
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    background: linear-gradient(270deg, #f7971e, #ffd200, #f7971e, #ff4e50);
-    background-size: 600% 600%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 8s ease infinite, fadeInUp 1s ease forwards;
-    opacity: 0;
-}
-@keyframes gradientAnimation {
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-@keyframes fadeInUp {
-    0% {opacity:0; transform: translateY(20px);}
-    100% {opacity:1; transform: translateY(0);}
-}
+            font-family: Arial, Helvetica, sans-serif;
 
-h3 { color: gold; margin: 0.5rem 0; }
-ul { padding-left: 20px; margin: 0.5rem 0 1.5rem; }
+            line-height: 1.6;
 
-/* Projects */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-.card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-}
-.card:nth-child(1){animation-delay:0.3s;}
-.card:nth-child(2){animation-delay:0.6s;}
-.card:nth-child(3){animation-delay:0.9s;}
-.card:hover { transform: translateY(-8px) scale(1.03); box-shadow:0px 6px 20px rgba(0,0,0,0.5); }
-.card img { 
-    width: 100%; 
-    height: 200px; 
-    object-fit: contain; 
-    background: #111; 
-    transition: transform 0.5s ease; 
-}
-.card img:hover { transform: scale(1.05); }
-.card-content { padding: 20px; }
-.card-content h3 { margin: 0 0 10px; font-size:1.3rem; color: gold; }
-.card-content p { font-size:0.95rem; color: #ccc; line-height:1.4; }
-@keyframes fadeIn { 0% {opacity:0; transform: translateY(20px);} 100% {opacity:1; transform: translateY(0);} }
+            margin: 20px;
 
-/* Footer */
-footer { text-align:center; padding:20px; background: linear-gradient(90deg, #1f1c2c, #928dab); color:#ccc; font-size:0.9rem; }
-a { color: #00e6ff; text-decoration:none; }
-a:hover { text-decoration: underline; }
-</style>
+            color: #333;
+
+        }
+
+        h1, h2 {
+
+            color: #222;
+
+        }
+
+        ul {
+
+            margin-left: 20px;
+
+        }
+
+        a {
+
+            color: #1a73e8;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-<nav>
-    <a href="#objective">Objective</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
 
-<header>
-    <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/pic.jpeg" alt="Aquib Khan">
-    <h1>Aquib Khan</h1>
-    <p>Senior Android Developer | 6+ Years Experience</p>
-</header>
 
-<section id="objective">
-    <h2 class="section-title">Objective</h2>
-    <p>Experienced and impact-driven Senior Android Developer with 5+ years of building robust, scalable, and user-focused Android applications. Proficient in Kotlin, Java, and Jetpack Compose, with deep expertise in MVVM architecture, modular app design, and REST API integration. Strong advocate of clean code, unit testing, and performance optimization, ensuring apps are reliable and maintainable at scale. Proven ability to collaborate cross-functionally, mentor junior engineers, and drive end-to-end delivery with CI/CD pipelines and agile practices. Passionate about creating seamless mobile experiences that solve real-world problems and scale across millions of users.</p>
-</section>
+<h1>Privacy Policy</h1>
 
-<section id="experience">
-    <h2 class="section-title">Experience</h2>
-    <h3>Capgemini | Senior Android Developer (Oct 2024 – Present)</h3>
-    <ul>
-        <li>Contributed to architectural decisions and design discussions.</li>
-        <li>Developed modular and scalable code in Kotlin.</li>
-        <li>Partnered with QA to ensure high-quality feature delivery.</li>
-        <li>Mentored new developers on project architecture and codebase.</li>
-    </ul>
-    <h3>Tata Consultancy Services | Senior Android Developer (Dec 2021 – Oct 2024)</h3>
-    <ul>
-        <li>Built Android apps using Jetpack components, Kotlin, and coroutines.</li>
-        <li>Integrated REST APIs and implemented local storage with Room.</li>
-        <li>Used Retrofit and Glide for network and image operations.</li>
-        <li>Delivered features for large-scale apps used by millions of users.</li>
-    </ul>
-    <h3>Pulp Strategy | Junior Android Developer (Apr 2021 – Jul 2021)</h3>
-    <ul>
-        <li>Collaborated with senior developers to contribute to two Android Applications.</li>
-        <li>Rendered assistance in troubleshooting and resolving technical issues.</li>
-        <li>Participated in code reviews and analyzed feedback to improve coding skills.</li>
-    </ul>
-    <h3>Magna Infotech | Junior Android Developer (Aug 2017 – Nov 2018)</h3>
-    <ul>
-        <li>Developed logistics apps with real-time tracking and route planning.</li>
-        <li>Implemented third-party API integrations to enhance workflow.</li>
-        <li>Conducted unit testing and mentored junior developers.</li>
-    </ul>
-</section>
 
-<section id="education">
-    <h2 class="section-title">Education</h2>
-    <p>Bachelor of Technology – 2015, Abdul Kalam Technical University, Lucknow</p>
-</section>
 
-<section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <p>Kotlin | Java | XML | SQL | JSON | Android SDK | Jetpack Components | Dagger/Hilt | Retrofit | Room | Firebase | RxJava | Coroutines | Jetpack Compose | MVVM | MVP | MVC | RESTful APIs | GraphQL | Firebase Realtime Database | SQLite | Android Studio | Git | Agile | Jenkins | JIRA | Unit Testing | UI Automation | OAuth 2.0 | SSL/TLS | ProGuard | Data Encryption | Secure Storage</p>
-</section>
+<p>
 
-<section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects">
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/horizon.jpeg" alt="Horizon Health">
-            <div class="card-content">
-                <h3>Horizon Health</h3>
-                <p><a href="https://play.google.com/store/apps/details?id=com.horizonblue.memberportal&hl=en_IN" target="_blank">Play Store Link</a></p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/paypal.jpeg" alt="PayPal Business">
-            <div class="card-content">
-                <h3>PayPal Business</h3>
-                <p><a href="https://play.google.com/store/apps/details?id=com.paypal.merchant.client&hl=en_IN" target="_blank">Play Store Link</a></p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/aquib384/portfolio/main/ttb.jpeg" alt="Turn the Bus">
-            <div class="card-content">
-                <h3>Turn the Bus</h3>
-                <p><a href="https://play.google.com/store/apps/details?id=mobile.turnthebus.org&hl=en&pli=1" target="_blank">Play Store Link</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+    This Privacy Policy applies to the <strong>Apna Market</strong> mobile application (hereby referred to as the
 
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: <a href="mailto:Khanaquib384@gmail.com">Khanaquib384@gmail.com</a></p>
-    <p>Phone: +91 9956029729</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/aquib-khan-6b0a2a12b/" target="_blank">Profile</a></p>
-    <p>Git: <a href="https://bitbucket.org/aquib384" target="_blank">bitbucket.org/aquib384</a></p>
-</section>
+    <strong>"Application"</strong>) developed by <strong>Aquib Khan</strong>
 
-<footer>
-    &copy; 2025 Aquib Khan. All Rights Reserved.
-</footer>
+    (hereby referred to as the <strong>"Service Provider"</strong>).
+
+    The Application is provided as a free service and is intended for use <strong>"AS IS"</strong>.
+
+</p>
+
+
+
+<h2>Information Collection and Use</h2>
+
+
+
+<p>
+
+    The Application collects certain information when you download and use it. This information may include:
+
+</p>
+
+
+
+<ul>
+
+    <li>Your device’s Internet Protocol (IP) address</li>
+
+    <li>App usage data such as pages visited, time and date of visits, and time spent in the app</li>
+
+    <li>Device information such as operating system and app version</li>
+
+</ul>
+
+
+
+<h2>Personal Information</h2>
+
+
+
+<p>
+
+    For providing core functionality, the Application may collect the following personally identifiable information:
+
+</p>
+
+
+
+<ul>
+
+    <li><strong>Phone number</strong> (for authentication and account verification)</li>
+
+    <li><strong>Email address</strong> (for account-related communication, if provided)</li>
+
+</ul>
+
+
+
+<p>
+
+    This information is used strictly for:
+
+</p>
+
+
+
+<ul>
+
+    <li>User authentication</li>
+
+    <li>Account management</li>
+
+    <li>Providing application functionality</li>
+
+</ul>
+
+
+
+<h2>Location Information</h2>
+
+
+
+<p>
+
+    The Application <strong>does not collect precise or approximate location data</strong> from your device.
+
+</p>
+
+
+
+<h2>Third-Party Services</h2>
+
+
+
+<p>
+
+    The Application uses third-party services that may collect information used to identify you.
+
+    These services have their own Privacy Policies.
+
+</p>
+
+
+
+<ul>
+
+    <li>
+
+        Google Play Services –
+
+        <a href="https://www.google.com/policies/privacy/" target="_blank">
+
+            https://www.google.com/policies/privacy/
+
+        </a>
+
+    </li>
+
+    <li>
+
+        Firebase Authentication –
+
+        <a href="https://firebase.google.com/support/privacy" target="_blank">
+
+            https://firebase.google.com/support/privacy
+
+        </a>
+
+    </li>
+
+    <li>
+
+        Firebase Crashlytics –
+
+        <a href="https://firebase.google.com/support/privacy" target="_blank">
+
+            https://firebase.google.com/support/privacy
+
+        </a>
+
+    </li>
+
+</ul>
+
+
+
+<p>
+
+    These services are used only to enable secure authentication and to improve application stability.
+
+</p>
+
+
+
+<h2>Data Sharing</h2>
+
+
+
+<p>
+
+    The Service Provider does not sell or rent your personal data.
+
+    Information may be disclosed only:
+
+</p>
+
+
+
+<ul>
+
+    <li>To comply with legal obligations</li>
+
+    <li>To protect the rights, safety, or security of users or the Service Provider</li>
+
+    <li>To trusted service providers who assist in operating the Application and agree to follow this Privacy Policy</li>
+
+</ul>
+
+
+
+<h2>Data Retention Policy</h2>
+
+
+
+<p>
+
+    The Service Provider will retain personal data for as long as you use the Application and for a reasonable
+
+    period thereafter.
+
+</p>
+
+
+
+<p>
+
+    If you would like your data to be deleted, please contact:
+
+</p>
+
+
+
+<p>
+
+    <strong>Email:</strong> <a href="mailto:khanaquib384@gmail.com">khanaquib384@gmail.com</a>
+
+</p>
+
+
+
+<h2>Opt-Out Rights</h2>
+
+
+
+<p>
+
+    You can stop all collection of information by uninstalling the Application using the standard uninstall
+
+    process available on your device or via the app store.
+
+</p>
+
+
+
+<h2>Children’s Privacy</h2>
+
+
+
+<p>
+
+    The Application is not intended for children under the age of 13.
+
+    The Service Provider does not knowingly collect personal information from children under 13 years of age.
+
+    If such information is discovered, it will be deleted immediately.
+
+</p>
+
+
+
+<h2>Security</h2>
+
+
+
+<p>
+
+    The Service Provider uses reasonable administrative, technical, and physical safeguards to protect
+
+    your information.
+
+</p>
+
+
+
+<h2>Changes to This Privacy Policy</h2>
+
+
+
+<p>
+
+    This Privacy Policy may be updated from time to time. Any changes will be posted on this page.
+
+    Continued use of the Application means you accept the updated policy.
+
+</p>
+
+
+
+<p>
+
+    <strong>Effective Date:</strong> 13 January 2026
+
+</p>
+
+
+
+<h2>Your Consent</h2>
+
+
+
+<p>
+
+    By using the Application, you consent to the collection and use of information as described in this Privacy Policy.
+
+</p>
+
+
+
+<h2>Contact Us</h2>
+
+
+
+<p>
+
+    If you have any questions regarding this Privacy Policy, please contact:
+
+</p>
+
+
+
+<p>
+
+    <strong>Email:</strong> <a href="mailto:khanaquib384@gmail.com">khanaquib384@gmail.com</a>
+
+</p>
+
+
 
 </body>
+
 </html>
